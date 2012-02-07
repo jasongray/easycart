@@ -1,0 +1,182 @@
+
+/* Main Container Styling */
+
+.mega-container
+{
+	text-align: left;
+	list-style-type: none !important;
+	padding: 0;
+	margin: 0;
+}
+
+.mega-container a{
+	color: #5483E7;
+	font-size: 1.32em;
+}
+
+/* List item styling */
+.mega-container li			{ list-style-type: none; padding: 0; }
+
+.mega
+{
+	display: -moz-inline-stack;
+    display: inline-block;
+    zoom: .99;
+    *display: inline;
+	position: relative;
+	z-index: 9;
+	padding-left: 10px; 
+	margin: 0;
+	list-style-type: none !important;
+}
+
+	.mega:first-child { background: none !important; }
+
+	.mega:hover { z-index: 10000 !important; }
+	*:first-child+html .mega:hover { zoom: 1 !important;  }
+
+
+/* Menu tab styling */	
+
+.mega .mega-tab,
+.mega .mega-link,
+.mega-current .mega-tab,
+.mega-current .mega-link,
+.mega-content .mega-tad,
+.mega-content .mega-link
+{
+	text-decoration: none;	
+	display: block;
+	padding: 11px;	
+	cursor: pointer;	
+	position: relative;	
+	z-index: 10;	
+}
+
+.mega-current .mega-tab { background: none;	 }
+
+.mega-link {   }
+
+.mega-link:hover,
+.mega-current .mega-link
+{ 
+	background: none;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .mega .mega-tab,
+    .mega .mega-link  { padding-bottom: 10px !important; }
+}
+
+	.mega:hover .mega-tab
+	{
+		background-position: right -100px; 
+		background-color: none;
+		-webkit-border-bottom-right-radius: 0;
+		-webkit-border-bottom-left-radius: 0;
+		-moz-border-radius-bottomright: 0;
+		-moz-border-radius-bottomleft: 0;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	
+/* Content container styling */	
+
+.mega-content 
+{ 
+	width: 180px;
+	display: none; 
+	-webkit-border-radius: 4px;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius: 4px;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 0;
+	border-radius: 4px;
+	border-top-left-radius: 0;	
+	border-top-right-radius: 0;	
+	padding: 10px;
+	position: absolute;
+	top: 25px;	
+	left: 10px;
+	border: none;
+	text-align: left;
+	color: #999;
+	z-index: 11;
+	background: transparent url(../img/bg_menu.png) repeat 0 0;
+	font-size: 0.83em;
+}
+
+	.mega .mega-content li { background-image: none; padding: 0; width: 100%; }
+	.mega:hover .mega-content { display: block; }	
+
+	*+html .mega-content { padding-bottom: 5px !important; } /* Fix padding in IE7 */
+	*+html .mega-menu li > ul { padding-top: 5px !important; padding-bottom: 10px !important; }
+	
+
+
+/* Drop Menu Styling */
+
+.mega-menu { background: #00C0FF; filter: none !important; padding: 5px 5px 0 !important; z-index: 10000 !important; }
+
+.mega-menu ul { list-style-type: none; margin: 0; }
+	
+	.mega-menu li { margin-bottom: .5em; }
+	
+		.mega-menu li a
+		{			 
+			background-color: none;  
+			display: block;
+			padding: 5px 10px 5px 10px;
+			color: #666;
+			text-decoration: none;
+			font-weight: bold;
+			-moz-border-radius: 4px; 
+			-webkit-border-radius: 4px; 
+			border-radius: 4px;
+		}
+		
+		.mega-menu li a.hasSub { background-image:  url(../img/admin/link-menu-arrow.png); background-repeat: no-repeat; background-position: 95% 50% ;}
+
+		
+			.mega-menu li a:hover { background: #00C0FF; color: #000; }
+
+		.mega-menu li { position: relative; }
+			.mega-menu li:hover > ul { display: block !important; background: #00C0FF;}
+			
+		.mega-menu li > ul { background: #00C0FF; width: 150px; padding: 10px 10px 5px;  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; z-index: 1000; position: absolute; left: 100%; top: 0; }
+
+		.mega-menu li > ul a { padding: 4px;}
+
+/* Utility Classes */
+
+.mega-left { left: 0; }
+.mega-right { left: auto; right: 0; }
+
+	.mega-right 
+	{ 
+		-webkit-border-radius: 4px;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-radius: 4px;
+		-moz-border-radius-topright: 0;
+		border-radius: 4px;
+		border-top-right-radius: 0;	
+	}
+
+
+/* Color styling */
+
+
+.mega-container .mega-tab { background-color: transparent; background-position: right top; }
+
+.mega-container .mega:hover .mega-tab,
+.mega-container .mega:hover .mega-link,
+.mega-container .mega-current .mega-tab,
+.mega-container .mega-current .mega-link  { background-color: none; color: #fff; border-color: none; }
+.mega-container .mega-content .mega a { padding: 4px;}
+.mega-container .mega:hover .mega-content { border-color: none; }
+.mega-container .mega .mega-content a:hover { color: #000; }
+.mega-container .mega-menu { background: transparent url(../img/bg_menu.png) repeat 0 100%; }
+.mega-container li > ul { background-color: none !important; }
